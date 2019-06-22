@@ -2,6 +2,7 @@ import PageContainer from 'components/PageContainer';
 import PageTitle     from 'components/PageTitle';
 import TextField     from 'components/TextField';
 import Button        from 'components/Button';
+import NoContent     from 'components/NoContent';
 
 import * as selectors from 'Root/modules/selectors';
 
@@ -31,6 +32,8 @@ class ServicesPage extends PureComponent {
       filter,
     } = this.state;
 
+    const filteredBonuses = bonuses.filter(bonus => bonus.title.toLowerCase().includes(filter.toLowerCase()));
+
     return (
       <PageContainer>
         <PageTitle title={t('title.services')} />
@@ -52,12 +55,16 @@ class ServicesPage extends PureComponent {
         </div>
 
         {
-          bonuses.map(bonus => (
+          filteredBonuses.length ? filteredBonuses.map(bonus => (
             <Service
               key={`${bonus.title} ${bonus.promocode}`}
               service={bonus}
             />
-          ))
+          )) : (
+            <NoContent
+              msg={t('msg.noBonuses')}
+            />
+          )
         }
       </PageContainer>
     );

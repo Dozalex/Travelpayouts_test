@@ -27,6 +27,7 @@
   },
   "msg": {
     "getBonus": "You got the bonus :)",
+    "noBonuses": "There are no services",
     "promocodeCopied": "Promocode copied to buffer."
   },
   "footer": {
