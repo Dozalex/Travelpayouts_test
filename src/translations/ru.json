@@ -1,0 +1,36 @@
+{
+  "title": {
+    "services": "Сервисы"
+  },
+  "label": {
+    "promocode": "Промокод",
+    "filter": "Фильтр",
+    "balance": "Баланс",
+    "nextPayout": "К выплате"
+  },
+  "placeholder": {
+    "serviceFilter": "Введите имя сервиса"
+  },
+  "link": {
+    "dashboard": "Дашборд",
+    "reports": "Отчеты",
+    "statistics": "Статистики",
+    "offers": "Офферы",
+    "tools": "Инструменты",
+    "dev": "Для разработчиков",
+    "services": "Сервисы",
+    "finance": "Финансы"
+  },
+  "btn": {
+    "reset": "Сбросить",
+    "getBonus": "Получить бонус"
+  },
+  "msg": {
+    "getBonus": "Вы получили бонус :)",
+    "noBonuses": "Сервисы не найдены",
+    "promocodeCopied": "Промокод копирован в буффер обмена."
+  },
+  "footer": {
+    "copywriting": "© Travelpayouts, 2011–2019"
+  }
+}

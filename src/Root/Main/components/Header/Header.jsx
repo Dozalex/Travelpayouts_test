@@ -2,7 +2,8 @@ import i18n from 'i18next';
 
 import './Header.pcss';
 
-import MenuBtn from './components/MenuBtn'
+import MenuBtn        from './components/MenuBtn';
+import LanguageSelect from './components/LanguageSelect';
 
 class Header extends PureComponent {
   renderMoneyItem = (label, value) => {
@@ -38,9 +39,16 @@ class Header extends PureComponent {
 
     return (
       <header className='Header'>
-        <MenuBtn onShowNavigation={onShowNavigation} />
-        {this.renderMoneyItem(t('label.balance'), header.balance)}
-        {this.renderMoneyItem(t('label.nextPayout'), header.next_payout)}
+        <div className='Header__left'>
+          <MenuBtn onShowNavigation={onShowNavigation} />
+
+          <div className='Header__money-container'>
+            {this.renderMoneyItem(t('label.balance'), header.balance)}
+            {this.renderMoneyItem(t('label.nextPayout'), header.next_payout)}
+          </div>
+        </div>
+
+        <LanguageSelect />
       </header>
     );
   }

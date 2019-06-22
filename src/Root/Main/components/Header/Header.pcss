@@ -1,9 +1,20 @@
 .Header {
   display: flex;
-  flex-flow: row wrap;
-  align-items: center;
+  align-items: end;
+  justify-content: space-between;
   padding: 18px 32px 16px;
   background: var(--second-bg-color);
+
+  &__left {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+
+  &__money-container {
+    display: flex;
+    flex-flow: row wrap;
+  }
 
   &__money {
     display: flex;
