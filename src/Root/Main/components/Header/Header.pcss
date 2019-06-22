@@ -12,8 +12,11 @@
   }
 
   &__money-container {
-    display: flex;
-    flex-flow: row wrap;
+    display: none;
+
+    @media (min-width: 600px) {
+      display: flex;
+    }
   }
 
   &__money {
