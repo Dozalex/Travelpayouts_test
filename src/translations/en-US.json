@@ -3,8 +3,12 @@
     "services": "Services"
   },
   "label": {
+    "filter": "Filter",
     "balance": "Balance",
     "nextPayout": "Next payout"
+  },
+  "placeholder": {
+    "serviceFilter": "Type service name"
   },
   "link": {
     "dashboard": "Dashboard",
