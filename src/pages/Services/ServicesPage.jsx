@@ -1,7 +1,22 @@
+import PageContainer from 'components/PageContainer';
+import PageTitle     from 'components/PageTitle';
+
 class ServicesPage extends PureComponent {
   render() {
-    return null;
+    const {
+      t,
+    } = this.props;
+
+    return (
+      <PageContainer>
+        <PageTitle title={t('title.services')} />
+      </PageContainer>
+    );
   }
 }
 
-export default ServicesPage;
+ServicesPage.propTypes = {
+  t: PropTypes.func,
+};
+
+export default translate()(ServicesPage);

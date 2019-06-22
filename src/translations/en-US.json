@@ -1,4 +1,7 @@
 {
+  "title": {
+    "services": "Services"
+  },
   "label": {
     "balance": "Balance",
     "nextPayout": "Next payout"
