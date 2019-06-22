@@ -12,5 +12,8 @@
     "dev": "For developers",
     "services": "Services",
     "finance": "Finance"
+  },
+  "footer": {
+    "copywriting": "© Travelpayouts, 2011–2019"
   }
 }

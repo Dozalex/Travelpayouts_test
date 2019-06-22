@@ -3,7 +3,7 @@ import * as selectors from 'Root/modules/selectors';
 
 import './Main.pcss';
 
-import Navigation from './components/Navigation/Navigation';
+import Navigation from './components/Navigation';
 import Header     from './components/Header';
 import Footer     from './components/Footer';
 

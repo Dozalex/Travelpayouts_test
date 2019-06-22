@@ -34,10 +34,10 @@ class Header extends PureComponent {
     if (!header) return null;
 
     return (
-      <div className='Header'>
+      <header className='Header'>
         {this.renderMoneyItem(t('label.balance'), header.balance)}
         {this.renderMoneyItem(t('label.nextPayout'), header.next_payout)}
-      </div>
+      </header>
     );
   }
 }
