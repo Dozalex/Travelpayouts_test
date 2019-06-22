@@ -1,0 +1,31 @@
+.Button {
+  padding: 10px 32px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  font-size: 19px;
+  line-height: 28px;
+  color: var(--main-text-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  background: var(--main-bg-color);
+
+  &:hover, &:focus {
+    border: 1px solid var(--primary-color);
+    box-shadow: var(--activeShadow);
+  }
+
+  &--primary {
+    background: var(--primary-color);
+    color: var(--contrast-main-text-color);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    color: var(--muted-color);
+    background: var(--main-bg-color);
+  }
+}

@@ -20,6 +20,9 @@
     "services": "Services",
     "finance": "Finance"
   },
+  "btn": {
+    "reset": "Reset"
+  },
   "footer": {
     "copywriting": "© Travelpayouts, 2011–2019"
   }
