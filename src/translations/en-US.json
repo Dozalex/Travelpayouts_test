@@ -1,1 +1,6 @@
-{}
+{
+  "label": {
+    "balance": "Balance",
+    "nextPayout": "Next payout"
+  }
+}

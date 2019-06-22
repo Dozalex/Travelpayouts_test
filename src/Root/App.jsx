@@ -10,6 +10,8 @@ import axiosSettings  from 'settings/axios';
 
 import Routes from 'routes/Routes';
 
+import './App.css';
+
 const store = configureStore();
 
 axiosSettings(store);

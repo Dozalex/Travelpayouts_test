@@ -1,0 +1,49 @@
+:root {
+  --main-text-color: #262626;
+  --contrast-main-text-color: #ffffff;
+  --second-text-color: #7d7d7d;
+  --main-bg-color: #e5e5e5;
+  --second-bg-color: #ffffff;
+  --dark-bg-color: #1b1d29;
+  --primary-color: #0085ff;
+  --border-color: #f5f7fa;
+
+  --label-font-size: 11px;
+
+  --main-font-family: Roboto, sans-serif;
+  --second-font-family: Rubik, sans-serif;
+}
+
+body {
+  font-family: var(--main-font-family);
+  color: var(--main-text-color);
+}
+
+h1 {
+  font-family: var(--second-font-family);
+  font-size: 39px;
+  font-weight: 300;
+  line-height: 46px;
+  color: inherit;
+}
+
+h2 {
+  font-size: 29px;
+  font-weight: 300;
+  line-height: 42px;
+  color: inherit;
+}
+
+p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 22px;
+  color: inherit;
+}
+
+label {
+  font-size: var(--label-font-size);
+  line-height: 16px;
+  text-transform: uppercase;
+}

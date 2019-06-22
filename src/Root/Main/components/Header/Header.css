@@ -1,0 +1,28 @@
+.Header {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 18px 32px 16px;
+  background: var(--second-bg-color);
+
+  &__money {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-of-type) {
+      margin-right: 23px;
+    }
+  }
+
+  &__money-label {
+    font-size: 13px;
+    line-height: 19px;
+    color: var(--second-text-color);
+  }
+
+  &__money-value {
+    font-family: var(--second-font-family);
+    font-size: 19px;
+    line-height: 26px;
+    color: var(--main-text-color);
+  }
+}

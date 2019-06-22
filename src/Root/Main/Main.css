@@ -1,0 +1,22 @@
+.Main {
+  height: 100vh;
+  display: flex;
+
+  &__page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &__page-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__page-content {
+    flex-grow: 1;
+  }
+}

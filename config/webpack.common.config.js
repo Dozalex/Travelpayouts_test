@@ -48,14 +48,7 @@ const commonConfiguration = {
             },
           },
           {
-            loader : 'postcss-loader',
-            options: {
-              plugins: () => [
-                require('autoprefixer')({
-                  browsers: ['last 2 versions'],
-                }),
-              ],
-            },
+            loader: 'postcss-loader',
           },
         ],
       },
@@ -86,7 +79,7 @@ const commonConfiguration = {
       },
       {
         from: './src/dataMock',
-        to  : 'translations',
+        to  : 'dataMock',
       },
     ]),
     new HtmlWebpackPlugin({
