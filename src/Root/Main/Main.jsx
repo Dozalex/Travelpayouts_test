@@ -1,9 +1,9 @@
 import * as actions   from 'Root/modules/actions';
 import * as selectors from 'Root/modules/selectors';
 
-import './Main.css';
+import './Main.pcss';
 
-import Navigation from './components/Navigation';
+import Navigation from './components/Navigation/Navigation';
 import Header     from './components/Header';
 import Footer     from './components/Footer';
 
@@ -16,11 +16,12 @@ class Main extends PureComponent {
     const {
       children,
       header,
+      location,
     } = this.props;
 
     return (
       <div className='Main'>
-        <Navigation />
+        <Navigation location={location} />
 
         <div className='Main__page'>
           <Header header={header} />
@@ -44,6 +45,8 @@ Main.propTypes = {
   header: PropTypes.object,
 
   getInitialData: PropTypes.func,
+
+  location: PropTypes.object,
 };
 
 Main = connect(state => ({

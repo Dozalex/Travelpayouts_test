@@ -36,7 +36,7 @@ const commonConfiguration = {
         exclude: /node_modules/,
       },
       {
-        test: /\.(scss|css)$/,
+        test: /\.(pcss|css)$/,
         use : [
           devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
           {

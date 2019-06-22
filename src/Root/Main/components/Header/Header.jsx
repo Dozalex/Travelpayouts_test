@@ -1,6 +1,6 @@
 import i18n from 'i18next';
 
-import './Header.css';
+import './Header.pcss';
 
 class Header extends PureComponent {
   renderMoneyItem = (label, value) => {

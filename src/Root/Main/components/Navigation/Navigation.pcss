@@ -1,0 +1,42 @@
+.Navigation {
+  height: 100%;
+  width: 80px;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--dark-bg-color);
+
+  &__logo {
+    margin-bottom: 40px;
+  }
+
+  &__menu {
+    width: 100%;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__menu-item {
+    width: 100%;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+
+    path {
+      transition: 0.25s ease;
+    }
+
+    &:hover, &:focus {
+      path {
+        fill: var(--second-bg-color);
+      }
+    }
+
+    &--selected {
+      path {
+        fill: var(--second-bg-color);
+      }
+    }
+  }
+}

@@ -2,5 +2,15 @@
   "label": {
     "balance": "Balance",
     "nextPayout": "Next payout"
+  },
+  "link": {
+    "dashboard": "Dashboard",
+    "reports": "Reports",
+    "statistics": "Statistics",
+    "offers": "Offers",
+    "tools": "Tools",
+    "dev": "For developers",
+    "services": "Services",
+    "finance": "Finance"
   }
 }
