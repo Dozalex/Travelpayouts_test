@@ -49,6 +49,7 @@ TextField.propTypes = {
 TextField.defaultProps = {
   type     : 'text',
   className: '',
+  onChange : () => {},
 };
 
 export default TextField;

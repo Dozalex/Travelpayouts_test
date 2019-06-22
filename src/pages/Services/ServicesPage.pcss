@@ -1,11 +1,14 @@
 .ServicesPage {
   &__filter-section {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: flex-end;
-  }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 8px;
+    grid-row-gap: 16px;
+    align-items: end;
+    justify-items: start;
 
-  &__filter-input {
-    margin-right: 8px;
+    @media (min-width: 768px) {
+      grid-template-columns: 300px auto;
+    }
   }
 }

@@ -1,4 +1,7 @@
 .Navigation {
+  position: absolute;
+  left: -80px;
+  z-index: 10;
   height: 100%;
   width: 80px;
   padding: 20px 0;
@@ -6,6 +9,16 @@
   flex-direction: column;
   align-items: center;
   background: var(--dark-bg-color);
+  transition: 0.25s ease;
+
+  @media (min-width: 768px) {
+    position: relative;
+    left: 0;
+  }
+
+  &--show {
+    left: 0;
+  }
 
   &__logo {
     margin-bottom: 40px;
@@ -37,6 +50,28 @@
       path {
         fill: var(--second-bg-color);
       }
+    }
+  }
+
+  &__backdrop {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s ease;
+    background: var(--dark-bg-color);
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+
+    &--show {
+      opacity: 0.5;
+      pointer-events: auto;
     }
   }
 }

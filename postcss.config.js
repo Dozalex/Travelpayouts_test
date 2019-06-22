@@ -4,6 +4,7 @@ module.exports = {
       browsers: ['last 2 versions'],
     }),
     require('postcss-custom-properties'),
+    require("postcss-color-function"),
     require('postcss-nested'),
   ],
 };

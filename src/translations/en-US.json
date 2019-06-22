@@ -3,6 +3,7 @@
     "services": "Services"
   },
   "label": {
+    "promocode": "Promocode",
     "filter": "Filter",
     "balance": "Balance",
     "nextPayout": "Next payout"
@@ -21,7 +22,12 @@
     "finance": "Finance"
   },
   "btn": {
-    "reset": "Reset"
+    "reset": "Reset",
+    "getBonus": "Get bonus"
+  },
+  "msg": {
+    "getBonus": "You got the bonus :)",
+    "promocodeCopied": "Promocode copied to buffer."
   },
   "footer": {
     "copywriting": "© Travelpayouts, 2011–2019"

@@ -8,9 +8,21 @@ import Header     from './components/Header';
 import Footer     from './components/Footer';
 
 class Main extends PureComponent {
+  state = {
+    showNavigation: false,
+  };
+
   componentDidMount() {
     this.props.getInitialData();
   }
+
+  onShowNavigation = () => {
+    this.setState({ showNavigation: true });
+  };
+
+  onHideNavigation = () => {
+    this.setState({ showNavigation: false });
+  };
 
   render() {
     const {
@@ -21,10 +33,17 @@ class Main extends PureComponent {
 
     return (
       <div className='Main'>
-        <Navigation location={location} />
+        <Navigation
+          showNavigation={this.state.showNavigation}
+          location={location}
+          onHide={this.onHideNavigation}
+        />
 
         <div className='Main__page'>
-          <Header header={header} />
+          <Header
+            onShowNavigation={this.onShowNavigation}
+            header={header}
+          />
 
           <div className='Main__page-body'>
             <div className='Main_page-content'>

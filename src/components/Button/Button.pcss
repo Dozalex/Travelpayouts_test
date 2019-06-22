@@ -19,13 +19,25 @@
   }
 
   &--primary {
+    border-color: var(--primary-color);
     background: var(--primary-color);
     color: var(--contrast-main-text-color);
+
+    &:hover, &:focus {
+      box-shadow: none;
+      background: color(#0085ff lightness(56%));
+      border-color: color(#0085ff lightness(56%));
+    }
   }
 
   &:disabled {
     cursor: not-allowed;
     color: var(--muted-color);
     background: var(--main-bg-color);
+
+    &:hover, &:focus {
+      border: 1px solid var(--border-color);
+      box-shadow: none;
+    }
   }
 }

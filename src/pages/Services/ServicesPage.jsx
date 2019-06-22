@@ -3,7 +3,11 @@ import PageTitle     from 'components/PageTitle';
 import TextField     from 'components/TextField';
 import Button        from 'components/Button';
 
+import * as selectors from 'Root/modules/selectors';
+
 import './ServicesPage.pcss';
+
+import Service from './components/Service';
 
 class ServicesPage extends PureComponent {
   state = {
@@ -21,6 +25,7 @@ class ServicesPage extends PureComponent {
   render() {
     const {
       t,
+      bonuses,
     } = this.props;
     const {
       filter,
@@ -32,7 +37,6 @@ class ServicesPage extends PureComponent {
 
         <div className='ServicesPage__filter-section'>
           <TextField
-            className='ServicesPage__filter-input'
             value={filter}
             onChange={this.onChangeFilter}
             label={t('label.filter')}
@@ -46,6 +50,15 @@ class ServicesPage extends PureComponent {
             {t('btn.reset')}
           </Button>
         </div>
+
+        {
+          bonuses.map(bonus => (
+            <Service
+              key={`${bonus.title} ${bonus.promocode}`}
+              service={bonus}
+            />
+          ))
+        }
       </PageContainer>
     );
   }
@@ -54,5 +67,9 @@ class ServicesPage extends PureComponent {
 ServicesPage.propTypes = {
   t: PropTypes.func,
 };
+
+ServicesPage = connect(state => ({
+  bonuses: selectors.getBonuses(state),
+}))(ServicesPage);
 
 export default translate()(ServicesPage);

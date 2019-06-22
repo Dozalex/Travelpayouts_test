@@ -1,0 +1,40 @@
+.Service {
+  margin-top: 24px;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  align-items: end;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  @media (min-width: 1300px) {
+    grid-template-columns: auto 300px 300px;
+  }
+
+  &__info {
+    overflow: hidden;
+  }
+
+  &__title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &__description {
+    color: var(--second-text-color);
+  }
+
+  &__promocode {
+  }
+
+  &__bonus-btn {
+    @media (min-width: 827px) and (max-width: 1152px) {
+      grid-column-start: 2;
+    }
+  }
+}

@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import SVG from 'react-inlinesvg';
+import SVG      from 'react-inlinesvg';
 
 import logo from 'images/logo.svg';
-import icon from 'images/icon.svg';
+import icon from 'images/menu-icon.svg';
 
 import route from 'routes/constants';
 
@@ -64,6 +64,7 @@ class Navigation extends PureComponent {
   renderMenuItem = ({ key, title, to }) => {
     const {
       location,
+      onHide,
     } = this.props;
     const selected = location.pathname === to;
 
@@ -73,6 +74,7 @@ class Navigation extends PureComponent {
         title={title}
       >
         <Link
+          onClick={onHide}
           to={to}
           className={`Navigation__menu-item ${selected ? 'Navigation__menu-item--selected' : ''}`}>
           <SVG src={icon} />
@@ -82,28 +84,41 @@ class Navigation extends PureComponent {
   };
 
   render() {
+    const {
+      onHide,
+      showNavigation,
+    } = this.props;
     const menuItems = this.getMenuItems();
 
     return (
-      <nav className='Navigation'>
-        <img
-          src={logo}
-          alt='logo'
-          className='Navigation__logo'
+      <React.Fragment>
+        <div
+          onClick={onHide}
+          className={`Navigation__backdrop ${showNavigation ? 'Navigation__backdrop--show' : ''}`}
         />
 
-        <ul className='Navigation__menu'>
-          {
-            menuItems.map(item => this.renderMenuItem(item))
-          }
-        </ul>
-      </nav>
+        <nav className={`Navigation ${showNavigation ? 'Navigation--show' : ''}`}>
+          <img
+            src={logo}
+            alt='logo'
+            className='Navigation__logo'
+          />
+
+          <ul className='Navigation__menu'>
+            {
+              menuItems.map(item => this.renderMenuItem(item))
+            }
+          </ul>
+        </nav>
+      </React.Fragment>
     );
   }
 }
 
 Navigation.propTypes = {
-  location: PropTypes.object,
+  onHide        : PropTypes.func.isRequired,
+  showNavigation: PropTypes.bool.isRequired,
+  location      : PropTypes.object.isRequired,
 };
 
 export default translate()(Navigation);
