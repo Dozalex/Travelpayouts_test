@@ -14,7 +14,7 @@ const commonEnv = {
 };
 
 const commonConfiguration = {
-  entry: './src/index',
+  entry: ['@babel/polyfill', './src/index'],
 
   output: {
     path      : path.join(__dirname, '../build/'),

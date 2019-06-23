@@ -34,7 +34,7 @@ Note:
 
 - Check `config/webpack.common.config.js` to set `ghPageName` (default for deployment is `Travelpayouts_test`)
 
-### Dependencies
+### Environment
 
 |package|version|
 |-------|-------|
