@@ -8,9 +8,9 @@ import configureStore from 'redux/configureStore';
 import i18n           from 'settings/translate';
 import axiosSettings  from 'settings/axios';
 
-import Routes from 'routes/Routes';
+import 'Root/App.pcss';
 
-import './App.pcss';
+import Routes from 'routes/Routes';
 
 const store = configureStore();
 
