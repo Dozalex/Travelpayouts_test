@@ -23,7 +23,7 @@ git checkout --orphan gh-pages
 git rm --cached -r .
 yarn build
 ```
-- Uncomment `build` in .gitignore.
+- Remove `build` from .gitignore.
 - Add build folder and commit.
 - Run this command:
 ```
