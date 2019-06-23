@@ -18,6 +18,11 @@ yarn dev
 
 ### Deployment to github pages
 
+```
+git checkout --orphan gh-pages
+git rm --cached -r .
+yarn build
+```
 - Uncomment `build` in .gitignore.
 - Add build folder and commit.
 - Run this command:
