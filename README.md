@@ -32,7 +32,7 @@ yarn deploy
 
 Note: 
 
-- Check `config/webpack.common.config.js` to set `BASE_URL` (default for deployment is `/Travelpayouts_test/`)
+- Check `config/webpack.common.config.js` to set `ghPageName` (default for deployment is `Travelpayouts_test`)
 
 ### Dependencies
 
