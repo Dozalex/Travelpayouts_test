@@ -29,7 +29,7 @@ class LanguageSelect extends PureComponent {
           this.languages.map((language, index)=> {
             return (
               <li key={'lng' + index} onClick={this.handleSelectLanguage(language)}>
-                <img src={`/images/flags/${language}.svg`} alt='lng'/>
+                <img src={`${process.env.BASE_URL}images/flags/${language}.svg`} alt='lng'/>
                 {language.toUpperCase()}
               </li>
             )
@@ -45,7 +45,7 @@ class LanguageSelect extends PureComponent {
         className='LanguageSelect'
         onClick={this.handleShowLanguageList}
       >
-        <img src={`/images/flags/${this.state.language}.svg`} alt='lng'/>
+        <img src={`${process.env.BASE_URL}images/flags/${this.state.language}.svg`} alt='lng'/>
         {this.state.language.toUpperCase()}
 
         {this.renderLanguageList()}

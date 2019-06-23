@@ -6,8 +6,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 
 const devMode = process.env.NODE_ENV !== 'production';
+const BASE_URL = devMode ? '/' : '/Travelpayouts_test/'; // for gh-pages
 
-const commonEnv = {};
+const commonEnv = {
+  BASE_URL: JSON.stringify(BASE_URL),
+};
 
 const commonConfiguration = {
   entry: './src/index',
@@ -15,7 +18,7 @@ const commonConfiguration = {
   output: {
     path      : path.join(__dirname, '../build/'),
     filename  : devMode ? '[name].js' : '[name].[chunkhash].js',
-    publicPath: '/',
+    publicPath: devMode ? '/' : './', // for gh-pages
   },
 
   resolve: {
@@ -58,7 +61,7 @@ const commonConfiguration = {
           {
             loader : 'file-loader',
             options: {
-              name: 'images/[name].[ext]',
+              name: devMode ? './images/[name].[ext]' : 'images/[name].[ext]', // for gh-pages
             },
           },
         ],
