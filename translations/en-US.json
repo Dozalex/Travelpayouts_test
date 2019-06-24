@@ -1,0 +1,36 @@
+{
+  "title": {
+    "services": "Services"
+  },
+  "label": {
+    "promocode": "Promocode",
+    "filter": "Filter",
+    "balance": "Balance",
+    "nextPayout": "Next payout"
+  },
+  "placeholder": {
+    "serviceFilter": "Type service name"
+  },
+  "link": {
+    "dashboard": "Dashboard",
+    "reports": "Reports",
+    "statistics": "Statistics",
+    "offers": "Offers",
+    "tools": "Tools",
+    "dev": "For developers",
+    "services": "Services",
+    "finance": "Finance"
+  },
+  "btn": {
+    "reset": "Reset",
+    "getBonus": "Get bonus"
+  },
+  "msg": {
+    "getBonus": "You got the bonus :)",
+    "noBonuses": "There are no services",
+    "promocodeCopied": "Promocode copied to buffer."
+  },
+  "footer": {
+    "copywriting": "© Travelpayouts, 2011–2019"
+  }
+}
