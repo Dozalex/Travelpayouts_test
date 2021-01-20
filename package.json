@@ -11,7 +11,7 @@
   "dependencies": {
     "axios": "^0.18.1",
     "i18next": "^13.1.4",
-    "immer": "^1.8.0",
+    "immer": "^8.0.1",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.6.2",
     "react": "^16.8.0",
